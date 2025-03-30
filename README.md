@@ -1,54 +1,28 @@
-# React + TypeScript + Vite
+# JSGame - Desafio Diário de JavaScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JSGame é um jogo interativo criado para desenvolvedores que desejam aprimorar suas habilidades em JavaScript de forma divertida. O jogo apresenta desafios diários com trechos de código contendo bugs ou comportamentos inesperados, e o objetivo é identificar o problema corretamente para acumular pontos e competir em um ranking.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Desafios Diários**: Novos desafios são gerados diariamente (simulados no código).
+- **Ranking**: Compare sua pontuação com jogadores fictícios em um ranking competitivo.
+- **Feedback Instantâneo**: Veja imediatamente se sua resposta está correta ou errada.
+- **Progresso Visual**: Uma barra de progresso acompanha seu avanço nos desafios.
+- **Reiniciar**: Recomece o jogo para melhorar sua pontuação.
 
-## Expanding the ESLint configuration
+## Como Jogar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Insira seu Nome**: Digite seu nome ao iniciar o jogo.
+2. **Responda aos Desafios**: Analise o código apresentado e escolha a resposta correta entre as opções.
+3. **Pontuação**: Ganhe pontos por acertos e bônus por rapidez.
+4. **Ranking**: Confira sua posição no ranking a qualquer momento.
+5. **Fim do Jogo**: Complete os desafios e veja sua pontuação final, com opção de reiniciar.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Instalação e Execução
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Siga estas etapas para rodar o JSGame localmente:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Clone o Repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/JSGame.git
+   cd JSGame
