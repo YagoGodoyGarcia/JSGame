@@ -1,0 +1,57 @@
+[
+    {
+      "question": "Qual é o bug neste código?\n\nlet x = 0;\nfor (let i = 0; i < 5; i--) x += i;",
+      "options": [
+        { "text": "O loop não termina porque i-- deveria ser i++", "isCorrect": true },
+        { "text": "Falta ponto e vírgula no final", "isCorrect": false },
+        { "text": "A variável x não foi declarada corretamente", "isCorrect": false },
+        { "text": "O operador += está errado", "isCorrect": false }
+      ],
+      "bug": "O loop não termina porque i-- faz o contador diminuir, causando um loop infinito. Deve ser i++.",
+      "points": 10
+    },
+    {
+      "question": "Qual é o bug neste código?\n\nlet a = 5;\nlet b = '5';\nif (a == b) console.log('Iguais');",
+      "options": [
+        { "text": "Deve usar === para comparar tipos diferentes", "isCorrect": true },
+        { "text": "A variável b deve ser um número", "isCorrect": false },
+        { "text": "O if está mal formatado", "isCorrect": false },
+        { "text": "Não há bug", "isCorrect": false }
+      ],
+      "bug": "O operador == faz coerção de tipos, então a == b é true, mas pode levar a erros. Deve usar ===.",
+      "points": 15
+    },
+    {
+      "question": "Qual é o bug neste código?\n\nlet arr = [1, 2, 3];\narr[3] = 4;\nconsole.log(arr.length);",
+      "options": [
+        { "text": "O array não foi inicializado corretamente", "isCorrect": false },
+        { "text": "Não há bug, imprime 4", "isCorrect": true },
+        { "text": "Deve usar push() para adicionar elementos", "isCorrect": false },
+        { "text": "O índice 3 está fora do array", "isCorrect": false }
+      ],
+      "bug": "Não há bug. O array é expandido automaticamente, e arr.length será 4.",
+      "points": 10
+    },
+    {
+      "question": "Qual é o bug neste código?\n\nlet obj = { name: 'João' };\nobj.name = 'Maria';\nconsole.log(obj.name);",
+      "options": [
+        { "text": "Não há bug, imprime 'Maria'", "isCorrect": true },
+        { "text": "O objeto não pode ser modificado", "isCorrect": false },
+        { "text": "Deve usar const para objetos", "isCorrect": false },
+        { "text": "A sintaxe do objeto está errada", "isCorrect": false }
+      ],
+      "bug": "Não há bug. Objetos são mutáveis, então obj.name é atualizado para 'Maria'.",
+      "points": 5
+    },
+    {
+      "question": "Qual é o bug neste código?\n\nlet num = 10;\nif (num = 5) console.log('Cinco');",
+      "options": [
+        { "text": "Deve usar == ou === para comparar", "isCorrect": true },
+        { "text": "A variável num não foi declarada", "isCorrect": false },
+        { "text": "O if não tem chaves", "isCorrect": false },
+        { "text": "Não há bug", "isCorrect": false }
+      ],
+      "bug": "O operador = atribui 5 a num, então a condição sempre será true. Deve usar == ou ===.",
+      "points": 15
+    }
+  ]
